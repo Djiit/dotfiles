@@ -1,0 +1,6 @@
+[user]
+	email = jtanay@ooreka.fr
+	name = Julien Tanay
+[core]
+	editor = atom --wait
+
