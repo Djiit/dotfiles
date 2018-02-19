@@ -3,3 +3,6 @@
 	name = Julien Tanay
 [core]
 	editor = atom --wait
+[push]
+	default = simple
+
