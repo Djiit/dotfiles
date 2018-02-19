@@ -10,7 +10,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-completions
 
-echo "Restart your session now!"
+echo "01. Edit the plugin list in .zshrc :"
+echo "	plugins=(git zsh-completion zsh-autosuggestions zsh-syntax-highlighting z aws)"
+echo "02. Restart your session."
 
 # Copy zsh dotfile
 cp .zlogin $HOME/.zlogin

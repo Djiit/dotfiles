@@ -1,3 +1,9 @@
+# Custom plugins
+plugins=(
+  git zsh-completion zsh-autosuggestions zsh-syntax-highlighting z aws
+)
+
+
 # Custom settings for ZSH
 
 ## Init thefuck completion

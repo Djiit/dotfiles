@@ -2,10 +2,10 @@
 sudo apt -qq -y update && sudo apt -qq -y upgrade && sudo apt -qq -y dist-upgrade
 
 # Install system support packages
-sudo apt install curl apt-transport-https ca-certificates software-properties-common python-software-properties build-essential
+sudo apt install git curl apt-transport-https ca-certificates software-properties-common python-software-properties build-essential libssl-dev libffi-dev
 
 # Install third party packages
-sudo apt install i3 zsh hexchat shutter scrot filezilla arandr
+sudo apt install i3 zsh hexchat shutter scrot filezilla arandr chromium
 
 # Fix nautilus for i3wm
 gsettings set org.gnome.desktop.background show-desktop-icons false
@@ -35,6 +35,7 @@ sudo apt -qq -y update && sudo apt-get install -y yarn
 
 # Copy common dotfiles
 cp -R .config $HOME/.config
+cp .gitconfig $HOME/.gitconfig
 
 # Clean-Up
 rm get-pip.py
