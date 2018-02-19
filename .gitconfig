@@ -1,6 +1,5 @@
 [user]
-	email = jtanay@ooreka.fr
+	email = julien.tanay@gmail.com
 	name = Julien Tanay
 [core]
 	editor = atom --wait
-
