@@ -11,7 +11,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-completions
 
 echo "01. Edit the plugin list in .zshrc :"
-echo "	plugins=(git zsh-completion zsh-autosuggestions zsh-syntax-highlighting z aws)"
+echo "	plugins=(git zsh-completion zsh-autosuggestions zsh-syntax-highlighting z aws httpie)"
 echo "02. Restart your session."
 
 # Copy zsh dotfile
