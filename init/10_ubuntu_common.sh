@@ -5,7 +5,7 @@ sudo apt -qq -y update && sudo apt -qq -y upgrade && sudo apt -qq -y dist-upgrad
 sudo apt install git curl apt-transport-https ca-certificates software-properties-common python-software-properties build-essential libssl-dev libffi-dev
 
 # Install third party packages
-sudo apt install i3 zsh hexchat shutter scrot filezilla arandr chromium
+sudo apt install i3 zsh hexchat shutter scrot filezilla arandr chromium-browser
 
 # Fix nautilus for i3wm
 gsettings set org.gnome.desktop.background show-desktop-icons false
