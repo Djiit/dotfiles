@@ -9,7 +9,7 @@ brew tap phinze/cask
 brew install brew-cask
 
 # Install common packages from brew Cask
-brew cask install vlc docker node thefuck visual-studio-code
+brew cask install vlc docker node thefuck visual-studio-code filezilla
 
 # Clean-Up
 brew clean-up --force
