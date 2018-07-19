@@ -59,5 +59,13 @@
     "gitlens.historyExplorer.enabled": true,
     "workbench.colorTheme": "Material Theme Palenight High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-palenight",
-    "materialTheme.fixIconsRunning": false
+    "materialTheme.fixIconsRunning": false,
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "cypress.json"
+            ],
+            "url": "https://on.cypress.io/cypress.schema.json"
+        }
+    ]
 }
