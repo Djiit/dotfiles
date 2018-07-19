@@ -16,3 +16,6 @@ eval $(pipenv --completion)
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
+# What did I do today ?
+alias did="vim +'normal Go' +'r!date' ~/did.txt"
+
