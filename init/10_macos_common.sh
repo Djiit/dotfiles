@@ -9,7 +9,7 @@ brew tap phinze/cask
 brew install brew-cask
 
 # Install common packages from brew Cask
-brew cask install vlc docker node visual-studio-code filezilla cheatsheet spectacle
+brew cask install vlc docker node visual-studio-code filezilla cheatsheet spectacle android-file-transfer
 
 # Clean-Up
 brew clean-up --force
