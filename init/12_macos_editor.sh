@@ -9,7 +9,6 @@ code --install-extension codezombiech.gitignore
 code --install-extension coolbear.systemd-unit-file
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension eamodio.gitlens
-code --install-extension joslarson.black-vscode
 code --install-extension mauve.terraform
 code --install-extension mechatroner.rainbow-csv
 code --install-extension ms-python.python
