@@ -2,7 +2,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install common packages from brew
-brew install node z yarn awscli packer tfenv jq
+brew install node z yarn awscli packer tfenv jq coreutils
 
 # Install brew Cask
 brew tap phinze/cask
