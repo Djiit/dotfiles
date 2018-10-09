@@ -4,3 +4,4 @@
 
 * Fira Code
 * Times Newer Roman
+* Sans Forgetica
