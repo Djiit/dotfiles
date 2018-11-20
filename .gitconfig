@@ -2,7 +2,12 @@
 	email = julien.tanay@gmail.com
 	name = Julien Tanay
 [core]
-	editor = atom --wait
+	editor = code --wait
 [push]
 	default = simple
 
+[diff]
+    tool = default-difftool
+
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE

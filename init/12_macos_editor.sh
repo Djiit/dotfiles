@@ -18,3 +18,4 @@ code --install-extension sdras.night-owl
 code --install-extension sidneys1.gitconfig
 code --install-extension wholroyd.HCL
 code --install-extension wholroyd.jinja
+code --install-extension TabNine.tabnine-vscode
