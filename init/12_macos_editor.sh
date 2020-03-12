@@ -1,4 +1,5 @@
 # Install VSCode extensions
+# FIXME 03/20 : clean up!
 code --install-extension EditorConfig.EditorConfig
 code --install-extension Equinusocio.vsc-material-theme
 code --install-extension GrapeCity.gc-excelviewer

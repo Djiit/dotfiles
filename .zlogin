@@ -1,11 +1,3 @@
-# Custom plugins
-plugins=(
-  git zsh-completion zsh-autosuggestions zsh-syntax-highlighting z aws
-)
-
-
-# Custom settings for ZSH
-
 ## Init thefuck completion
 eval $(thefuck --alias)
 
@@ -18,3 +10,4 @@ autoload -Uz compinit && compinit -i
 
 # What did I do today ?
 alias did="vim +'normal Go' +'r!date' ~/did.txt"
+alias ping='prettyping --nolegend'
