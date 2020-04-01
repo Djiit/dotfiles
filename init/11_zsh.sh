@@ -10,8 +10,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-completions
 
+# Install theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
 echo "01. Edit the plugin list in .zshrc :"
-echo "	plugins=(git zsh-completion zsh-autosuggestions zsh-syntax-highlighting z aws httpie)"
+echo "	plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting z aws httpie)"
 echo "02. Restart your session."
 
 # Copy zsh dotfile

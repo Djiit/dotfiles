@@ -67,5 +67,10 @@
             ],
             "url": "https://on.cypress.io/cypress.schema.json"
         }
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#5D0A24",
+        "titleBar.activeBackground": "#820E32",
+        "titleBar.activeForeground": "#FFFCFC"
+    }
 }
