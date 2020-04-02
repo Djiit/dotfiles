@@ -1,13 +1,7 @@
 [user]
-	email = julien.tanay@gmail.com
 	name = Julien Tanay
-[core]
-	editor = code --wait
-[push]
-	default = simple
+	email = julien.tanay@gmail.com
 
-[diff]
-    tool = default-difftool
+[includeIf "gitdir:~/Projects/ConsenSys/"]
+	path = ~/.gitconfig-consensys
 
-[difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE

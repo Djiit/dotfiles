@@ -14,7 +14,7 @@ git clone https://github.com/zsh-users/zsh-completions
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 echo "01. Edit the plugin list in .zshrc :"
-echo "	plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting z aws httpie)"
+echo "	plugins=(git zsh-completions zsh-autosuggestions zsh-syntax-highlighting z aws httpie kubectl)"
 echo "02. Restart your session."
 
 # Copy zsh dotfile
