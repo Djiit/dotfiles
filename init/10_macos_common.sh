@@ -2,7 +2,11 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install common packages from brew
-brew install zsh yarn awscli jq coreutils prettyping bat fzf tldr noti the_silver_searcher derailed/k9s/k9s
+brew install zsh jq prettyping bat fzf tldr noti the_silver_searcher
+
+# Install dev/ops packages from brew
+brew install awscli helm derailed/k9s/k9s yarn coreutils
+
 brew tap weaveworks/tap && brew install weaveworks/tap/eksctl
 brew tap heroku/brew && brew install heroku
 
@@ -10,7 +14,7 @@ brew tap heroku/brew && brew install heroku
 $(brew --prefix)/opt/fzf/install
 
 # Install common packages from brew Cask
-brew cask install vlc docker visual-studio-code cheatsheet joplin
+brew cask install vlc docker visual-studio-code cheatsheet joplin maccy
 
 # Clean-Up
 brew clean-up --force
