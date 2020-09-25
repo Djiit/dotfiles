@@ -1,0 +1,15 @@
+name: custom
+parent: default
+
+matches:
+  - trigger: ":ip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "curl 'https://api.ipify.org'"
+  - trigger: ":email"
+    replace: "julien.tanay@gmail.com"
+  - trigger: ":cons"
+    replace: "julien.tanay@consensys.net"
