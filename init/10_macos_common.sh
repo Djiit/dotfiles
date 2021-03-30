@@ -14,7 +14,7 @@ brew tap heroku/brew && brew install heroku
 $(brew --prefix)/opt/fzf/install
 
 # Install common packages from brew Cask
-brew cask install vlc docker visual-studio-code cheatsheet joplin maccy
+brew install --cask vlc docker visual-studio-code cheatsheet joplin maccy keepingyouawake
 
 # Clean-Up
 brew clean-up --force

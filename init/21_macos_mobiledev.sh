@@ -1,5 +1,5 @@
 # Install common packages from brew
-brew cask install java8 android-sdk
+brew install --cask java8 android-sdk
 
 echo """# Add this lines to ~/.zshrc : 
 export ANDROID_HOME=/usr/local/share/android-sdk
