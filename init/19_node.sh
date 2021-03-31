@@ -1,2 +1,2 @@
 # Install common nodejs packages
-yarn global add fast-cli now
+yarn global add fast-cli vercel
