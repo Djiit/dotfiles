@@ -2,10 +2,10 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install common packages from brew
-brew install zsh jq prettyping bat fzf tldr noti the_silver_searcher
+brew install zsh jq prettyping bat fzf tldr noti the_silver_searcher fx syncthing
 
 # Install dev/ops packages from brew
-brew install awscli helm derailed/k9s/k9s yarn coreutils sops 
+brew install awscli helm derailed/k9s/k9s yarn coreutils sops oras
 
 brew tap weaveworks/tap && brew install weaveworks/tap/eksctl
 brew tap heroku/brew && brew install heroku
