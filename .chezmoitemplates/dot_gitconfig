@@ -1,0 +1,7 @@
+[user]
+	name = Julien Tanay
+	email = julien.tanay@gmail.com
+	signingkey = 93D4820DD7B75487
+
+[gpg]
+	format = openpgp

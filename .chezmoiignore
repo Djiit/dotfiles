@@ -1,0 +1,10 @@
+.gitignore
+github/
+install.sh
+README.md
+
+{{ if eq .work true }}
+.gitconfig
+{{ else }}
+.gitconfig-djiit
+{{ end }}

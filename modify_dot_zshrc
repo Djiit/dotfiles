@@ -1,0 +1,3 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- $plugins :=  `plugins=({{.zshPlugins | join " "}})` -}}
+{{- .chezmoi.stdin | replaceAllRegex "^plugins=.*" $plugins }}
