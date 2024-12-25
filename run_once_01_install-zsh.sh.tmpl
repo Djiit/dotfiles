@@ -1,17 +1,11 @@
 #!/bin/bash
 
-# Set ZSH as primary shell
-chsh -s /bin/zsh
-
 # Install Oh My ZSH
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 
 # Install OMZ plugins
-cd $HOME/.oh-my-zsh/custom/plugins
+cd $ZSH/custom/plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting || true
 git clone https://github.com/zsh-users/zsh-autosuggestions || true
 git clone https://github.com/zsh-users/zsh-completions || true
 git clone https://github.com/mattmc3/zshrc.d || true
-
-# Install theme
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k || true

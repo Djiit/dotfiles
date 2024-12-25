@@ -1,9 +1,6 @@
 # starship
 eval "$(starship init zsh)"
 
-# autocompletion
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # zoxide
 eval "$(zoxide init zsh)"
 

@@ -1,10 +1,10 @@
-.devcontainer
+.devcontainer/
+.github/
 .gitignore
-github/
+*.md
 install.sh
-README.md
 
-{{ if eq .work true }}
+{{ if and (eq .work true) (eq .codespaces false) }}
 .gitconfig
 {{ else }}
 .gitconfig-djiit
