@@ -1,0 +1,4 @@
+command_timeout = 3000
+
+[docker_context]
+disabled = true
