@@ -1,5 +1,6 @@
 {{- /* Checks if running interactively, which is not the case for GitHub Codespaces */ -}}
 {{- $interactive := stdinIsATTY -}}
+{{- $codespaces:= env "CODESPACES" | not | not -}}
 
 {{- /* If non-interactive, assume it's work-related */ -}}
 {{- $work := true -}}
@@ -37,3 +38,4 @@ data:
   name: {{ $name | quote }}
   email: {{ $email | quote }}
   work: {{ $work }}
+  codespaces: {{ $codespaces }}

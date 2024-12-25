@@ -13,3 +13,4 @@ zshPlugins:
   - 'rails'
   - 'ruby'
   - 'jq'
+  - 'zshrc.d'

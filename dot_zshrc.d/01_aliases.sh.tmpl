@@ -1,0 +1,28 @@
+# Github aliases
+ghpr() {
+  git push -u origin HEAD
+  export GHPR_DESCRIPTION=${1:-""}
+  export GHPR_BRANCH=$(git branch --show-current)
+  envsubst < $HOME/.config/github-pr-template.md > $HOME/.config/github-pr-template.md.tmp
+  gh pr create --fill --draft --body-file=$HOME/.config/github-pr-template.md.tmp --head=$(git rev-parse --abbrev-ref HEAD)
+}
+
+# Jira aliases
+alias jme="jira issue list -a=$(jira me) -q='status not in (Done)'"
+alias jc="jira issue create -t=Story -T=$HOME/.config/jira-ticket-ee-template.tpl --no-input"
+alias jcfoo="jc --label='FOO'"
+alias jcbar="jc --label='BAR'"
+alias jcauto="jcbar --custom ee-scope='Automation platform'"
+alias jcdevenv="jcbar --custom ee-scope='Developer experience'"
+alias jcquality="jcfoo --custom ee-scope='Quality engineering'"
+alias jcrelease="jcfoo --custom ee-scope='Release engineering'"
+
+jsearch() {
+  args="$@"
+  jira issue list -q "project = "EN" and summary ~ \"${args}\""
+}
+
+# Others
+{{ range .aliases -}}
+alias {{ .name | quote }}={{ .command | quote }}
+{{ end -}}

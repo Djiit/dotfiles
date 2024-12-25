@@ -1,0 +1,7 @@
+aliases:
+  - name: 'kb'
+    command: 'kubectl'
+  - name: 'kx'
+    command: 'kubectx'
+  - name: 'cat'
+    command: 'bat --paging=never'

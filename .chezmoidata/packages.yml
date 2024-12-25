@@ -157,6 +157,7 @@ packages:
       - 'sops'
       - 'sponge'
       - 'spotify-tui'
+      - 'starship'
       - 'stepci'
       - 'stern'
       - 'syft'
