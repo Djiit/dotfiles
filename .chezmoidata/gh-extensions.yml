@@ -1,0 +1,7 @@
+ghExtensions:
+  - actions/gh-actions-cache 
+  - github/gh-copilot
+  - dlvhdr/gh-dash
+  - advanced-security/gh-sbom
+  - copilot-extensions/gh-debug-cli
+  - rnorth/gh-tidy-notifications

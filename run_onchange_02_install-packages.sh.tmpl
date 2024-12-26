@@ -1,8 +1,24 @@
 #!/bin/bash
 
-curl -sfL https://direnv.net/install.sh | bash
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-curl -sS https://starship.rs/install.sh | sh
+{{ range .packages.common.binaries -}}
+{{ . }}
+{{ end -}}
+
+{{ range index .packages .chezmoi.os "binaries" -}}
+{{ . }}
+{{ end -}}
+
+{{ if eq .chezmoi.os "linux" -}}
+sudo mkdir -p -m 755 /etc/apt/keyrings
+
+{{ range .packages.linux.aptSources -}}
+{{ . }}
+{{ end -}}
+
+sudo apt update
+
+sudo apt install {{ .packages.linux.apt | join " " }}} -y
+{{ end -}}
 
 {{ if eq .chezmoi.os "darwin" -}}
 HOMEBREW_NO_AUTO_UPDATE=1 brew bundle \
@@ -22,9 +38,6 @@ brew {{ . | quote }}
 cask {{ . | quote }}
 {{ end -}}
 EOF
-
-# post-install for fzf
-$(brew --prefix)/opt/fzf/install --all
 
 # post-install for docker-compose
 mkdir -p ~/.docker/cli-plugins

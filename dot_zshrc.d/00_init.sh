@@ -7,6 +7,11 @@ eval "$(zoxide init zsh)"
 # direnv
 eval "$(direnv hook zsh)"
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+# mise
+eval "$(mise activate zsh)"
 # Go
 export GOPATH=$HOME/golang
 export GOROOT=/opt/homebrew/opt/go/libexec
@@ -39,7 +44,6 @@ export PATH="$PATH:/Users/julien.tanay/.local/bin"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export MICRO_TRUECOLOR=1
-eval "$(/Users/julien.tanay/.local/bin/mise activate zsh)"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/julien.tanay/.cache/lm-studio/bin"
