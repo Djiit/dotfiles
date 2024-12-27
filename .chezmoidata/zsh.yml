@@ -4,7 +4,6 @@ zsh:
     - https://github.com/zsh-users/zsh-autosuggestions
     - https://github.com/zsh-users/zsh-completions
     - https://github.com/mattmc3/zshrc.d
-    - https://github.com/reegnz/jq-zsh-plugin
     - https://github.com/joshskidmore/zsh-fzf-history-search
   plugins: 
   - 'git'
@@ -20,5 +19,4 @@ zsh:
   - 'gpg-agent'
   - 'rails'
   - 'ruby'
-  - 'jq'
   - 'zshrc.d'
