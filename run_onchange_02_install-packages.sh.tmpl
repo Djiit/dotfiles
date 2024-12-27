@@ -12,7 +12,10 @@ fi
 {{ end -}}
 
 {{ range index .packages .chezmoi.os "binaries" -}}
-{{ . }}
+if ! command -v {{ .name }} &> /dev/null; then
+    echo "Installing: {{ .name }}"
+    {{ .command }}
+fi
 {{ end -}}
 
 {{ if eq .chezmoi.os "linux" -}}
