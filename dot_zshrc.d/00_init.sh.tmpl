@@ -1,36 +1,5 @@
 #!/bin/bash
 
-{{ if and (eq .chezmoi.os "linux") (ne .chezmoi.arch "arm64") -}}
-# brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-{{ end -}}
-
-# starship
-eval "$(starship init zsh)"
-
-# zoxide
-eval "$(zoxide init zsh)"
-
-# direnv
-eval "$(direnv hook zsh)"
-
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-
-# mise
-eval "$(mise activate zsh)"
-# Go
-export GOPATH=$HOME/golang
-export GOROOT=/opt/homebrew/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-
-# Moon
-export PATH="$HOME/.moon/bin:$PATH"
-
-# Tilt
-alias tilt=/opt/homebrew/bin/tilt
-
 # GPG
 export GPG_TTY=$(tty)
 
@@ -69,3 +38,36 @@ export ANDROID_NDK_ROOT=/Users/julien.tanay/Library/Android/sdk/ndk/26.1.1090912
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
+
+
+{{ if and (eq .chezmoi.os "linux") (ne .chezmoi.arch "arm64") -}}
+# brew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+{{ end -}}
+
+# starship
+eval "$(starship init zsh)"
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+# mise
+eval "$(mise activate zsh)"
+
+# Go
+export GOPATH=$HOME/golang
+export GOROOT=/opt/homebrew/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
+# Moon
+export PATH="$HOME/.moon/bin:$PATH"
+
+# Tilt
+alias tilt=/opt/homebrew/bin/tilt
