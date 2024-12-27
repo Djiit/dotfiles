@@ -67,3 +67,10 @@ EOF
 mkdir -p ~/.docker/cli-plugins
 ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
 {{ end -}}
+
+# post-install for pipx
+pipx ensurepath
+sudo pipx ensurepath --global
+
+
+pipx install ggshield {{ .packages.common.pipx | join " " }}

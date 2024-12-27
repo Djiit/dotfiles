@@ -9,6 +9,8 @@ packages:
         command: "curl -sS https://starship.rs/install.sh | sh -s -- -y"
       - name: "zoxide"
         command: "curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh"
+    pipx:
+      - "ggshield"
     taps:
       - "anchore/grype"
       - "ankitpokhrel/jira-cli"
@@ -41,6 +43,7 @@ packages:
       - echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
     apt:
       - "gh"
+      - "pipx"
   darwin:
     taps:
       - "aquasecurity/trivy"
@@ -49,7 +52,6 @@ packages:
       - "dagger/tap"
       - "equinix-labs/otel-cli"
       - "fluxcd/tap"
-      - "gitguardian/tap"
       - "heroku/brew"
       - "hmarr/tap"
       - "homebrew/bundle"
