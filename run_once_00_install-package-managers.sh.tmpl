@@ -1,7 +1,5 @@
-{{ if ne .chezmoi.arch "arm64" -}}
 #!/bin/bash
 
-{{- /* Initializes the name variable with a default value */ -}}
-# Install Homebrew
+{{ if ne .chezmoi.arch "arm64" -}}
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 {{ end -}}

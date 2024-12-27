@@ -1,4 +1,11 @@
 {
-	"name": "Ubuntu",
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04"
+  "name": "Ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jinliming2.vscode-go-template"
+      ]
+    }
+  }
 }

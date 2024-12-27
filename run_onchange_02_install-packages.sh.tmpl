@@ -1,7 +1,14 @@
 #!/bin/bash
 
+export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 {{ range .packages.common.binaries -}}
-{{ . }}
+if ! command -v {{ .name }} &> /dev/null; then
+    echo "Installing: {{ .name }}"
+    {{ .command }}
+fi
 {{ end -}}
 
 {{ range index .packages .chezmoi.os "binaries" -}}
@@ -16,12 +23,26 @@ sudo mkdir -p -m 755 /etc/apt/keyrings
 {{ end -}}
 
 sudo apt update
+sudo apt install -y {{ .packages.linux.apt | join " " }}
+{{ end -}}
 
-sudo apt install {{ .packages.linux.apt | join " " }}} -y
+{{ if ne .chezmoi.arch "arm64" -}}
+brew bundle \
+    --no-upgrade \
+    --no-lock \
+    --quiet \
+    --file=/dev/stdin <<EOF
+{{ range .packages.common.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+{{ range .packages.common.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+EOF
 {{ end -}}
 
 {{ if eq .chezmoi.os "darwin" -}}
-HOMEBREW_NO_AUTO_UPDATE=1 brew bundle \
+brew bundle \
     --no-upgrade \
     --no-lock \
     --quiet \

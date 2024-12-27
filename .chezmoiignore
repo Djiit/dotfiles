@@ -1,6 +1,9 @@
 .devcontainer/
+.env
+.env.*
 .github/
 .gitignore
+.vscode/
 *.md
 install.sh
 
