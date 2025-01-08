@@ -10,7 +10,7 @@ ghpr() {
 }
 
 # Jira aliases
-alias jme="jira issue list -a=$(jira me) -q='status not in (Done)'"
+alias jme="jira issue list -a=$(jira me) -q=\"project IS NOT EMPTY AND status not in (Done, Declined, Closed, Published, 'Won\'t do')\""
 alias jc="jira issue create -t=Story -T=$HOME/.config/jira-ticket-ee-template.tpl --no-input"
 alias jcfoo="jc --label='FOO'"
 alias jcbar="jc --label='BAR'"
