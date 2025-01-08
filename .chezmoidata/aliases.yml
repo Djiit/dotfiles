@@ -5,3 +5,7 @@ aliases:
     command: 'kubectx'
   - name: 'cat'
     command: 'bat --paging=never'
+  - name: 'gfix'
+    command: 'g -am "fix"'
+  - name: 'gfixn'
+    command: 'g -am "fix" -n'
