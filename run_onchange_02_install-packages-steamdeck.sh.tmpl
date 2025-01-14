@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+flatpak install --system {{ .packages.linux.flatpaks | join " " }}
