@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# starship
+ZSH_THEME=""
+eval "$(starship init zsh)"
+
 # GPG
 export GPG_TTY=$(tty)
 
@@ -26,9 +30,6 @@ esac
 # brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 {{ end -}}
-
-# starship
-eval "$(starship init zsh)"
 
 # zoxide
 eval "$(zoxide init zsh)"
