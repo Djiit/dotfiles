@@ -23,6 +23,7 @@ sudo apt install -y {{ .packages.linux.apt | join " " }}
 {{ end -}}
 
 {{ if ne .chezmoi.arch "arm64" -}}
+echo "Installing: brew"
 brew bundle \
     --no-upgrade \
     --no-lock \
