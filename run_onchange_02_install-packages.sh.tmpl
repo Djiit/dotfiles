@@ -22,8 +22,9 @@ sudo apt update
 sudo apt install -y {{ .packages.linux.apt | join " " }}
 {{ end -}}
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 {{ if ne .chezmoi.arch "arm64" -}}
-echo "Installing: brew"
 brew bundle \
     --no-upgrade \
     --no-lock \
