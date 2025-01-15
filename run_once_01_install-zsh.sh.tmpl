@@ -1,10 +1,13 @@
 #!/bin/bash
 
 # Install Oh My ZSH
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+if [ -z "$ZSH" ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+    export ZSH="$HOME/.oh-my-zsh"
+fi
 
-# Install OMZ plugins
-export $ZSH_CUSTOM=$ZSH/custom
+# Install Oh My ZSH plugins
+export ZSH_CUSTOM="$ZSH/custom"
 mkdir -p $ZSH_CUSTOM/plugins 
 cd $ZSH/custom/plugins
 
