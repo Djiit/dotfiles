@@ -5,24 +5,14 @@ export GPG_TTY=$(tty)
 
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-# bun completions
-[ -s "/Users/julien.tanay/.bun/_bun" ] && source "/Users/julien.tanay/.bun/_bun"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Created by `pipx` on 2023-10-25 14:53:02
-export PATH="$PATH:/Users/julien.tanay/.local/bin"
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export MICRO_TRUECOLOR=1
+export PATH="$PATH:$HOME/.local/bin"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/julien.tanay/.cache/lm-studio/bin"
+export PATH="$PATH:$HOME/.cache/lm-studio/bin"
 
 # pnpm
-export PNPM_HOME="/Users/julien.tanay/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

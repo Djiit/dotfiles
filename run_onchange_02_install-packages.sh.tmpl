@@ -11,13 +11,6 @@ if ! command -v {{ .name }} &> /dev/null; then
 fi
 {{ end -}}
 
-{{ range index .packages .chezmoi.os "binaries" -}}
-if ! command -v {{ .name }} &> /dev/null; then
-    echo "Installing: {{ .name }}"
-    {{ .command }}
-fi
-{{ end -}}
-
 {{ if eq .chezmoi.os "linux" -}}
 sudo mkdir -p -m 755 /etc/apt/keyrings
 
@@ -69,8 +62,4 @@ ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plu
 {{ end -}}
 
 # post-install for pipx
-pipx ensurepath
-sudo pipx ensurepath --global
-
-
-pipx install ggshield {{ .packages.common.pipx | join " " }}
+pipx install {{ .packages.common.pipx | join " " }}

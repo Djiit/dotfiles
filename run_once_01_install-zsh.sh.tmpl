@@ -4,6 +4,8 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
 
 # Install OMZ plugins
+export $ZSH_CUSTOM=$ZSH/custom
+mkdir -p $ZSH_CUSTOM/plugins 
 cd $ZSH/custom/plugins
 
 {{ range .zsh.sources -}}

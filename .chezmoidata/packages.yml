@@ -35,9 +35,6 @@ packages:
       - "yq"
       - "ankitpokhrel/jira-cli/jira-cli"
   linux:
-    binaries:
-      - name: "bitwarden-cli"
-        command: "curl -sLfo bw.zip https://github.com/bitwarden/clients/releases/download/cli-v2024.12.0/bw-linux-2024.12.0.zip && sudo unzip -od /usr/local/bin/ bw.zip && rm bw.zip"
     aptSources:
       - out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg && cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null && sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
       - echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
@@ -162,7 +159,6 @@ packages:
       - "libpq"
       - "libzip"
       - "mariadb"
-      - "micro"
       - "mkdocs"
       - "mvfst"
       - "noti"
@@ -175,19 +171,14 @@ packages:
       - "poetry"
       - "pop"
       - "poppler"
-      - "postgresql@12"
-      - "postgresql@15"
+      - "postgresql"
       - "procs"
-      - "python@3.10"
-      - "python@3.11"
-      - "qemu"
       - "ruby-build"
       - "rbenv"
       - "rbenv-vars"
       - "sassc"
       - "score-helm"
       - "semgrep"
-      - "sevenzip"
       - "shellcheck"
       - "slides"
       - "sonar-scanner"
