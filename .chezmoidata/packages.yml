@@ -29,6 +29,7 @@ packages:
       - "jq"
       - "kubectx"
       - "kubernetes-cli"
+      - "micro"
       - "nvm"
       - "pre-commit"
       - "prettyping"
