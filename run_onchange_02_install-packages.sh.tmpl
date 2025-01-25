@@ -1,9 +1,5 @@
 #!/bin/bash
 
-export HOMEBREW_NO_ENV_HINTS=1
-export HOMEBREW_NO_INSTALL_CLEANUP=1
-export HOMEBREW_NO_AUTO_UPDATE=1
-
 {{ range .packages.common.binaries -}}
 if ! command -v {{ .name }} &> /dev/null; then
     echo "Installing: {{ .name }}"
@@ -22,7 +18,17 @@ sudo apt update
 sudo apt install -y {{ .packages.linux.apt | join " " }}
 {{ end -}}
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Homebrew
+
+export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+{{ if eq .chezmoi.os "linux" -}}
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+{{ else if eq .chezmoi.os "darwin" -}}
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+{{ end -}}
 
 {{ if ne .chezmoi.arch "arm64" -}}
 brew bundle \
