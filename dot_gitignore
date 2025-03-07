@@ -24,3 +24,6 @@ Temporary Items
 
 # Custom
 .infracost/
+
+# Mise
+mise.local.toml
