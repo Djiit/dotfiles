@@ -56,6 +56,7 @@ packages:
       - net.lutris.Lutris
       - net.retrodeck.retrodeck
       - org.mozilla.firefox
+      - com.heroicgameslauncher.hgl
   darwin:
     taps:
       - "aquasecurity/trivy"
