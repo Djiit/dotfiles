@@ -33,7 +33,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 {{ if ne .chezmoi.arch "arm64" -}}
 brew bundle \
     --no-upgrade \
-    --no-lock \
     --quiet \
     --file=/dev/stdin <<EOF
 {{ range .packages.common.taps -}}
@@ -48,7 +47,6 @@ EOF
 {{ if eq .chezmoi.os "darwin" -}}
 brew bundle \
     --no-upgrade \
-    --no-lock \
     --quiet \
     --file=/dev/stdin <<EOF
 {{ range .packages.darwin.taps -}}
