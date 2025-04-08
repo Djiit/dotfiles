@@ -12,13 +12,11 @@ ghpr() {
 # Jira aliases
 alias jme="jira issue list -a=$(jira me) -q=\"project IS NOT EMPTY AND status not in (Done, Declined, Closed, Published, 'Won\'t do')\""
 alias jc="jira issue create -t=Story -T=$HOME/.config/jira-ticket-ee-template.tpl --no-input"
+alias jpes= "jc --project=PES"
 alias jcfoo="jc --label='FOO'"
 alias jcbar="jc --label='BAR'"
-alias jcauto="jcbar --custom ee-scope='Automation platform'"
-alias jcdevenv="jcbar --custom ee-scope='Developer experience'"
-alias jcquality="jcfoo --custom ee-scope='Quality engineering'"
-alias jcrelease="jcfoo --custom ee-scope='Release engineering'"
-alias jpes= "jc --project=PES"
+alias jcm="jcbar --custom ee-scope='Monolith'"
+alias jcs="jcbar --custom ee-scope='Multi-Services'"
 
 jsearch() {
   args="$@"
