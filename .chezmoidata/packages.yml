@@ -9,6 +9,8 @@ packages:
         command: "curl -sS https://starship.rs/install.sh | sh -s -- -y"
       - name: "zoxide"
         command: "curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh"
+      - name: "atuin"
+        command: "curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh"
     pipx:
       - "ggshield"
     taps:
