@@ -232,7 +232,6 @@ packages:
     casks:
       - "aws-vpn-client"
       - "bitwarden"
-      - "bruno"
       - "cheatsheet"
       - "chiaki-ng"
       - "discord"
