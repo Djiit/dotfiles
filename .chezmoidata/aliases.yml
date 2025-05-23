@@ -9,3 +9,6 @@ aliases:
     command: 'g -am "fix"'
   - name: 'gfixn'
     command: 'g -am "fix" -n'
+  - name: 'c'
+    command: 'cursor'
+
