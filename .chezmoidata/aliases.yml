@@ -11,4 +11,6 @@ aliases:
     command: 'g -am "fix" -n'
   - name: 'c'
     command: 'cursor'
+  - name: 'temp'
+    command: 'cd "$(mktemp -d)"'
 
