@@ -16,6 +16,14 @@ sudo mkdir -p -m 755 /etc/apt/keyrings
 
 sudo apt update
 sudo apt install -y {{ .packages.linux.apt | join " " }}
+
+ # Install snaps
+ {{ range .packages.linux.snaps -}}
+ if ! command -v {{ .name }} &> /dev/null; then
+     echo "Installing snap: {{ .name }}"
+     {{ .command }}
+ fi
+ {{ end -}}
 {{ end -}}
 
 # Homebrew
