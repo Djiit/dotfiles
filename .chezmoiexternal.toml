@@ -1,3 +1,3 @@
 [".prompts"]
   type = "git-repo"
-  url = "https://github.com/djiit/prompts.git"
+  url = "ssh://github.com/djiit/prompts.git"
