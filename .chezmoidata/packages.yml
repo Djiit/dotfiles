@@ -3,8 +3,6 @@ packages:
     binaries:
       - name: "mise"
         command: "curl https://mise.run | sh"
-      - name: "direnv"
-        command: "curl -sfL https://direnv.net/install.sh | bash"
       - name: "starship"
         command: "curl -sS https://starship.rs/install.sh | sh -s -- -y"
       - name: "zoxide"
@@ -40,13 +38,16 @@ packages:
       - "copilot-cli"
       - "anomalyco/tap/opencode"
       - "charmbracelet/tap/crush"
+      - "ankitpokhrel/jira-cli/jira-cli"
   linux:
     aptSources:
       - out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg && cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null && sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
       - echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
     apt:
+      - "direnv"
       - "gh"
       - "pipx"
+      - "zsh"
     flatpaks:
       - com.bitwarden.desktop
       - com.discordapp.Discord
@@ -98,7 +99,6 @@ packages:
       - "jpeg-xl"
       - "aom"
       - "autoenv"
-      - "ankitpokhrel/jira-cli/jira-cli"
       - "icu4c@76"
       - "boost"
       - "glib"
