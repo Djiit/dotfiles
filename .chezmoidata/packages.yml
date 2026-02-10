@@ -13,11 +13,12 @@ packages:
       - "ggshield"
     taps:
       - "anchore/grype"
-      - "ankitpokhrel/jira-cli"
       - "derailed/k9s"
       - "anomalyco/tap"
       - "charmbracelet/tap"
+      - "atlassian/homebrew-acli"
     brews:
+      - "acli"
       - "actionlint"
       - "aws-iam-authenticator"
       - "awscli"
