@@ -39,7 +39,6 @@ packages:
       - "copilot-cli"
       - "anomalyco/tap/opencode"
       - "charmbracelet/tap/crush"
-      - "ankitpokhrel/jira-cli/jira-cli"
       - "topgrade"
   linux:
     aptSources:

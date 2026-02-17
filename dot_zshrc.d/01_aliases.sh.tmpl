@@ -9,19 +9,30 @@ ghpr() {
   gh pr create --fill --draft --body-file=$HOME/.config/github-pr-template.md.tmp --head=$(git rev-parse --abbrev-ref HEAD)
 }
 
-# Jira aliases
-alias jme="jira issue list -a=$(jira me) -q=\"project IS NOT EMPTY AND status not in (Done, Declined, Closed, Published, 'Won\'t do')\""
-alias jc="jira issue create -t=Story -T=$HOME/.config/jira-ticket-ee-template.tpl --no-input"
-alias jpes="jc --project=PES"
-alias jcfoo="jc --label='FOO'"
-alias jcbar="jc --label='BAR'"
-alias jcm="jcfoo --custom ee-scope='Monolith'"
-alias jcs="jcbar --custom ee-scope='Multi-Services'"
-alias jcia="jc --project=BWA -t=Task"
+# Jira aliases (using acli)
+alias jme="acli jira workitem search --jql \"assignee = currentUser() AND project IS NOT EMPTY AND status not in (Done, Declined, Closed, Published, 'Won\'t do')\""
+alias jc="acli jira workitem create --type \"Story\" --editor"
+alias jcilot="acli jira workitem create --project \"ILOT\" --type \"Tâche\" --assignee \"@me\" --editor"
 
-jsearch() {
-  args="$@"
-  jira issue list -q "project = "EN" and summary ~ \"${args}\""
+# Helper function to create Jira ticket with template
+jct() {
+  local temp_file=$(mktemp)
+  cp $HOME/.config/jira-ticket-template.md "$temp_file"
+  ${EDITOR:-vim} "$temp_file"
+  
+  # Extract summary (first non-empty line after "# Summary")
+  local summary=$(grep -A 1 "^# Summary" "$temp_file" | tail -n 1 | sed 's/^\[//;s/\]$//')
+  
+  # Extract everything after "# Description" for the description
+  local description=$(sed -n '/^# Description/,$p' "$temp_file" | tail -n +2)
+  
+  if [[ -n "$summary" && "$summary" != "[Brief one-line description of the ticket]" ]]; then
+    echo "$description" | acli jira workitem create --summary "$summary" --description-file /dev/stdin "$@"
+  else
+    echo "❌ No summary provided. Ticket creation cancelled."
+  fi
+  
+  rm "$temp_file"
 }
 
 # Others

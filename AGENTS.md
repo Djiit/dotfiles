@@ -86,15 +86,11 @@ The `.chezmoi.yaml.tmpl` file defines key variables:
 **GitHub Workflow:**
 - `ghpr [description]` - Push branch and create draft PR with template
 
-**Jira CLI Workflow:**
+**Jira Workflow (acli):**
 - `jme` - List my active Jira issues
-- `jc` - Create Story with template
-- `jpes` - Create in PES project
-- `jcfoo`, `jcbar` - Create with specific labels
-- `jcm` - FOO + Monolith scope
-- `jcs` - BAR + Multi-Services scope
-- `jcia` - Create Task in BWA project
-- `jsearch <query>` - Search EN project by summary
+- `jc` - Create Story with interactive editor
+- `jcilot` - Create Task in ILOT project with interactive editor
+- `jct [--project PROJECT --type TYPE]` - Create ticket using template (opens editor, extracts summary and description)
 
 ### Platform-Specific Behavior
 
