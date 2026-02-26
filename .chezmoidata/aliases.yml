@@ -9,8 +9,9 @@ aliases:
     command: 'g -am "fix"'
   - name: 'gfixn'
     command: 'g -am "fix" -n'
-  - name: 'c'
-    command: 'cursor'
   - name: 'temp'
     command: 'cd "$(mktemp -d)"'
-
+  - name: 'ghs'
+    command: 'git stash --all && gh repo sync --branch "$(gh repo view --json defaultBranchRef -q .defaultBranchRef.name)" && git stash pop'
+  - name: 'ghrb'
+    command: 'git stash --all && b=$(gh repo view --json defaultBranchRef -q .defaultBranchRef.name) && git fetch origin "$b" && git rebase "origin/$b" && git stash pop'
