@@ -76,4 +76,4 @@ ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plu
 {{ end -}}
 
 # post-install for pipx
-pipx install {{ .packages.common.pipx | join " " }}
+pipx install --force {{ .packages.common.pipx | join " " }}
