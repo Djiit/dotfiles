@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Homebrew (macOS and Linux)
+if [[ -x "/opt/homebrew/bin/brew" ]]; then
+  eval "$('/opt/homebrew/bin/brew' shellenv)"
+fi
+if [[ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]]; then
+  eval "$('/home/linuxbrew/.linuxbrew/bin/brew' shellenv)"
+fi
+
 # starship
 ZSH_THEME=""
 eval "$(starship init zsh)"
@@ -26,11 +34,6 @@ esac
 # Fubectl
 [ -f $HOME/fubectl.source ] && source $HOME/fubectl.source
 
-{{ if and (eq .chezmoi.os "linux") (ne .chezmoi.arch "arm64") -}}
-# brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-{{ end -}}
-
 # zoxide
 eval "$(zoxide init zsh)"
 
@@ -38,7 +41,9 @@ eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+if command -v fzf >/dev/null 2>&1; then
+  source <(fzf --zsh)
+fi
 
 # Go
 export GOPATH=$HOME/golang
