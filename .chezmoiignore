@@ -7,6 +7,7 @@
 .vscode/
 *.md
 install.sh
+AGENTS.md
 
 {{ if and (eq .work true) (eq .codespaces false) }}
 .gitconfig
