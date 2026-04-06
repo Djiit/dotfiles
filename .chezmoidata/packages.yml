@@ -1,6 +1,8 @@
 packages:
   common:
     binaries:
+      - name: "nb"
+        command: "curl -fsSL https://nanobrew.trilok.ai/install | bash"
       - name: "mise"
         command: "curl https://mise.run | sh"
       - name: "starship"
@@ -71,7 +73,6 @@ packages:
     taps:
       - "aquasecurity/trivy"
       - "bearer/tap"
-      - "dagger/tap"
       - "equinix-labs/otel-cli"
       - "fluxcd/tap"
       - "heroku/brew"
@@ -79,11 +80,8 @@ packages:
       - "homebrew/bundle"
       - "homebrew/services"
       - "minamijoyo/hcledit"
-      - "mingrammer/flog"
-      - "pluralsh/plural"
       - "robusta-dev/krr"
       - "score-spec/tap"
-      - "snyk/tap"
       - "soluble-ai/kubetap"
       - "streetpea/streetpea"
       - "tilt-dev/tap"
@@ -191,16 +189,13 @@ packages:
       - "heroku/brew/heroku"
       - "hmarr/tap/codeowners"
       - "minamijoyo/hcledit/hcledit"
-      - "mingrammer/flog/flog"
-      - "pluralsh/plural/plural"
       - "robusta-dev/krr/krr"
-      - "snyk/tap/snyk"
       - "tilt-dev/tap/ctlptl"
     casks:
       - "aws-vpn-client"
       - "bitwarden"
       - "cheatsheet"
-      - "chiaki-ng"
+      - "streetpea/streetpea/chiaki-ng"
       - "discord"
       - "font-3270-nerd-font"
       - "font-agave-nerd-font"
