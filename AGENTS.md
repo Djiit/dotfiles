@@ -44,7 +44,7 @@ chezmoi status
 
 All configuration data lives in `.chezmoidata/*.yml`:
 
-- `packages.yml` - Package lists for Homebrew (taps, brews, casks), apt, pipx, flatpak, and custom binaries
+- `packages.yml` - Package lists for Homebrew (taps, brews, casks), apt, flatpak, and custom binaries
 - `aliases.yml` - Shell aliases dynamically loaded into zshrc
 - `zsh.yml` - ZSH plugin configuration
 - `gh-extensions.yml` - GitHub CLI extensions
@@ -70,7 +70,6 @@ The `.chezmoi.yaml.tmpl` file defines key variables:
    - Custom binaries via curl install scripts (mise, direnv, starship, zoxide, atuin)
    - APT packages and sources (Linux only)
    - Homebrew taps, formulae, and casks (OS-specific)
-   - pipx packages
 4. `run_onchange_03_install-gh-extensions.sh.tmpl` - Installs GitHub CLI extensions
 
 ### Shell Configuration
@@ -107,7 +106,6 @@ The `.chezmoiignore` file controls what gets applied:
    - `packages.common.taps/brews` - Common Homebrew packages
    - `packages.darwin.taps/brews/casks` - macOS-specific
    - `packages.linux.apt` - Linux APT packages
-   - `packages.common.pipx` - Python tools via pipx
 2. Run `chezmoi apply` to trigger `run_onchange_02_install-packages.sh.tmpl`
 
 ### Adding New Aliases
