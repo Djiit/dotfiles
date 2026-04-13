@@ -30,6 +30,7 @@ packages:
       - "awscli"
       - "bat-extras"
       - "bat"
+      - "copilot-cli"
       - "fzf"
       - "grype"
       - "hadolint"
@@ -187,7 +188,6 @@ packages:
       - "robusta-dev/krr/krr"
       - "tilt-dev/tap/ctlptl"
     casks:
-      - "copilot-cli"
       - "aws-vpn-client"
       - "bitwarden"
       - "streetpea/streetpea/chiaki-ng"
