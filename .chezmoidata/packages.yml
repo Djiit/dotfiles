@@ -1,8 +1,6 @@
 packages:
   common:
     binaries:
-      - name: "nb"
-        command: "curl -fsSL https://nanobrew.trilok.ai/install | bash"
       - name: "mise"
         command: "curl https://mise.run | sh"
       - name: "starship"
@@ -77,6 +75,17 @@ packages:
       - name: "ghostty"
         command: "snap install ghostty --classic"
   darwin:
+    taps:
+      - "aquasecurity/trivy"
+      - "bearer/tap"
+      - "equinix-labs/otel-cli"
+      - "fluxcd/tap"
+      - "heroku/brew"
+      - "hmarr/tap"
+      - "minamijoyo/hcledit"
+      - "robusta-dev/krr"
+      - "streetpea/streetpea"
+      - "tilt-dev/tap"
     brews:
       - "act"
       - "pycparser"

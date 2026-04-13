@@ -38,14 +38,27 @@ export HOMEBREW_NO_AUTO_UPDATE=1
     eval "$(/opt/homebrew/bin/brew shellenv)"
 {{ end -}}
 
-nb bundle install /dev/stdin <<EOF
+brew bundle \
+    --no-upgrade \
+    --quiet \
+    --file=/dev/stdin <<EOF
+{{ range .packages.common.taps -}}
+tap {{ . | quote }}
+{{ end -}}
 {{ range .packages.common.brews -}}
 brew {{ . | quote }}
 {{ end -}}
 EOF
 
 {{ if eq .chezmoi.os "darwin" -}}
-nb bundle install /dev/stdin <<EOF
+brew bundle \
+    --no-upgrade \
+    --quiet \
+    --file=/dev/stdin <<EOF
+{{ range .packages.darwin.taps -}}
+tap {{ . | quote }}
+{{ end -}}
+
 {{ range .packages.darwin.brews -}}
 brew {{ . | quote }}
 {{ end -}}
