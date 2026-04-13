@@ -17,6 +17,8 @@ packages:
         command: "curl -fsSL https://ollama.com/install.sh | sh"
       - name: "bun"
         command: "curl -fsSL https://bun.sh/install | bash"
+      - name: "copilot"
+        command: "curl -fsSL https://gh.io/copilot-install | bash"
     taps:
       - "anchore/grype"
       - "derailed/k9s"
@@ -30,7 +32,6 @@ packages:
       - "awscli"
       - "bat-extras"
       - "bat"
-      - "copilot-cli"
       - "fzf"
       - "grype"
       - "hadolint"
