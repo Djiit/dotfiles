@@ -27,3 +27,7 @@ Temporary Items
 
 # Mise
 mise.local.toml
+
+# Agents
+.memsearch/
+.claude/*local.json
