@@ -1,0 +1,28 @@
+# Ghostty Configuration
+# https://ghostty.org/docs/config
+
+# Theme
+theme = catppuccin-latte.conf
+
+# Font
+# font-family = "JetBrains Mono"
+# font-size = 14
+
+# Window
+# window-padding-x = 8
+# window-padding-y = 8
+# window-decoration = true
+
+# Cursor
+# cursor-style = block
+# cursor-style-blink = true
+
+# Shell integration
+shell-integration = detect
+shell-integration-features = cursor,sudo,title
+
+# Copy on select
+# copy-on-select = true
+
+# Mouse
+# mouse-hide-while-typing = true
