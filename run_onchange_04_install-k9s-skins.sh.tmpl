@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# catppuccin/k9s skins - https://github.com/catppuccin/k9s
+{{ if eq .chezmoi.os "darwin" -}}
+OUT="${XDG_CONFIG_HOME:-$HOME/Library/Application Support}/k9s/skins"
+{{ else -}}
+OUT="${XDG_CONFIG_HOME:-$HOME/.config}/k9s/skins"
+{{ end -}}
+mkdir -p "$OUT"
+curl -fsSL https://github.com/catppuccin/k9s/archive/main.tar.gz | tar xz -C "$OUT" --strip-components=2 k9s-main/dist
