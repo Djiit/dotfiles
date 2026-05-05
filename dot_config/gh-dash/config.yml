@@ -1,0 +1,95 @@
+prSections:
+  - title: My open PRs (ready)
+    filters: is:open draft:false author:@me archived:false org:doctolib sort:updated-desc
+    layout:
+      author:
+        hidden: true
+  - title: My open PRs (drafts)
+    filters: is:open draft:true author:@me archived:false org:doctolib sort:updated-desc
+    layout:
+      author:
+        hidden: true
+  - title: Awaiting my review
+    filters: is:open review-requested:@me archived:false org:doctolib sort:created-asc
+  - title: Involved (reviewer or assignee)
+    filters: is:open user-review-requested:@me archived:false org:doctolib sort:updated-desc
+  - title: Recently merged (mine)
+    filters: is:merged author:@me archived:false org:doctolib sort:updated-desc
+    limit: 20
+
+issuesSections:
+  - title: My open issues
+    filters: is:open author:@me archived:false org:doctolib sort:updated-desc
+  - title: Assigned to me
+    filters: is:open assignee:@me archived:false org:doctolib sort:updated-desc
+
+defaults:
+  preview:
+    open: true
+    width: 60
+  prsLimit: 20
+  issuesLimit: 20
+  view: prs
+  layout:
+    prs:
+      updatedAt:
+        width: 7
+      repo:
+        width: 20
+      title:
+        grow: true
+      author:
+        width: 15
+      assignees:
+        width: 20
+        hidden: true
+      base:
+        width: 15
+        hidden: true
+      lines:
+        width: 16
+    issues:
+      updatedAt:
+        width: 7
+      repo:
+        width: 15
+      title:
+        grow: true
+      creator:
+        width: 10
+      assignees:
+        width: 20
+        hidden: true
+
+repoPaths:
+  doctolib/*: ~/workbench/*
+
+keybindings:
+  prs:
+    - key: O
+      command: >
+        gh pr checkout {{.PrNumber}}
+  universal:
+    - key: ctrl+r
+      builtin: refresh
+
+theme:
+  ui:
+    sectionsShowCount: true
+    table:
+      compact: false
+  colors:
+    text:
+      primary: "#4c4f69"
+      secondary: "#8839ef"
+      inverted: "#dce0e8"
+      faint: "#5c5f77"
+      warning: "#df8e1d"
+      success: "#40a02b"
+      error: "#d20f39"
+    background:
+      selected: "#ccd0da"
+    border:
+      primary: "#8839ef"
+      secondary: "#bcc0cc"
+      faint: "#ccd0da"
