@@ -58,6 +58,9 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 export EDITOR=micro
 
+# Force k9s to use ~/.config regardless of platform
+export K9S_CONFIG_DIR="$HOME/.config/k9s"
+
 # mise
 export MISE_EXPERIMENTAL=1
 if command -v mise >/dev/null 2>&1; then
