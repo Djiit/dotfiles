@@ -53,6 +53,9 @@
 ## set search.filters to include "workspace" before other filter modes.
 # workspaces = false
 
+## Disable the up-key binding (do not override the terminal "up" arrow key)
+up_key_binding = false
+
 ## which filter mode to use when atuin is invoked from a shell up-key binding
 ## the accepted values are identical to those of "filter_mode"
 ## leave unspecified to use same mode set in "filter_mode"

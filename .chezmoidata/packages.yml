@@ -19,6 +19,8 @@ packages:
         command: "curl -fsSL https://bun.sh/install | bash"
       - name: "copilot"
         command: "curl -fsSL https://gh.io/copilot-install | bash"
+      - name: "gcx"
+        command: "curl -fsSL https://raw.githubusercontent.com/grafana/gcx/main/scripts/install.sh | sh"
     taps:
       - "anchore/grype"
       - "derailed/k9s"
