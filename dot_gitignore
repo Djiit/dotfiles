@@ -31,3 +31,5 @@ mise.local.toml
 # Agents
 .memsearch/
 .claude/*local.json
+CLAUDE.local.md
+AGENTS.local.md

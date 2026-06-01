@@ -34,6 +34,7 @@ packages:
       - "awscli"
       - "bat-extras"
       - "bat"
+      - "bitwarden-cli"
       - "fzf"
       - "grype"
       - "hadolint"
@@ -76,6 +77,9 @@ packages:
       - name: "ghostty"
         command: "snap install ghostty --classic"
   darwin:
+    binaries:
+      - name: "vllm"
+        command: "curl -fsSL https://raw.githubusercontent.com/vllm-project/vllm-metal/main/install.sh | bash"
     taps:
       - "aquasecurity/trivy"
       - "bearer/tap"
@@ -93,7 +97,6 @@ packages:
       - "cryptography"
       - "libsodium"
       - "ansible"
-      - "bitwarden-cli"
       - "webp"
       - "jpeg-xl"
       - "aom"

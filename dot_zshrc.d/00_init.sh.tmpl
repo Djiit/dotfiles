@@ -66,3 +66,9 @@ export MISE_EXPERIMENTAL=1
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
+
+# vllm-metal
+export PATH="$HOME/.venv-vllm-metal/bin:$PATH"
+
+# Ollama
+export OLLAMA_ORIGINS="moz-extension://*,chrome-extension://*,safari-web-extension://*"

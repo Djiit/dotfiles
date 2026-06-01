@@ -15,3 +15,5 @@ aliases:
     command: 'git stash --all && gh repo sync --branch "$(gh repo view --json defaultBranchRef -q .defaultBranchRef.name)" && git stash pop'
   - name: 'ghrb'
     command: 'git stash --all && b=$(gh repo view --json defaultBranchRef -q .defaultBranchRef.name) && git fetch origin "$b" && git rebase "origin/$b" && git stash pop'
+  - name: 'ot'
+    command: 'obsidian daily:append content="- [ ] $1"'
