@@ -71,6 +71,7 @@ input_price = 1.5
 output_price = 7.5
 thinking = "medium"
 auto_compact_threshold = 200000
+supports_images = true
 
 [[models]]
 name = "devstral-small-latest"
