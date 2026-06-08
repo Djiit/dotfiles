@@ -192,6 +192,7 @@ allowlist = [
     "pnpm run",
     "pnpm install",
     "pnpm lint",
+    "pnpm list",
     "pnpm test",
     "pnpm typecheck",
     "printf",

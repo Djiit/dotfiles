@@ -1,0 +1,21 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "providers": {
+    "mistral": {
+      "name": "Mistral",
+      "base_url": "https://api.mistral.ai/v1/",
+      "type": "openai-compat",
+      "api_key": "$MISTRAL_API_KEY",
+      "models": [
+        {
+          "name": "Devstral 2",
+          "id": "devstral-2512",
+          "cost_per_1m_in": 0.4,
+          "cost_per_1m_out": 2,
+          "context_window": 256000,
+          "default_max_tokens": 20000
+        }
+      ]
+    }
+  }
+}
