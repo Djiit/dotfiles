@@ -21,19 +21,6 @@ enable_auto_update = true
 enable_notifications = true
 api_timeout = 720.0
 auto_compact_threshold = 200000
-tool_paths = []
-mcp_servers = []
-connectors = []
-enabled_tools = []
-disabled_tools = []
-agent_paths = []
-enabled_agents = []
-disabled_agents = []
-installed_agents = []
-skill_paths = []
-enabled_skills = []
-disabled_skills = []
-
 enable_experimental_hooks = true
 
 [[providers]]
