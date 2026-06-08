@@ -8,11 +8,10 @@
       "api_key": "$MISTRAL_API_KEY",
       "models": [
         {
-          "name": "Devstral 2",
-          "id": "devstral-2512",
-          "cost_per_1m_in": 0.4,
-          "cost_per_1m_out": 2,
-          "context_window": 256000,
+          "name": "Mistral Medium Latest",
+          "id": "mistral-medium-latest",
+          "can_reason": true,
+          "context_window": 200000,
           "default_max_tokens": 20000
         }
       ]
