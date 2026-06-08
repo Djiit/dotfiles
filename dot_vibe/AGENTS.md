@@ -8,6 +8,10 @@ I'm Julien Tanay (he/him), a Software Engineer.
 
 Most of the projects we work with are under ~/Projects/Work and ~/Projects/Personal. Whenever the user talk about a project or repository, check those locations.
 
+### Preferred tools
+
+- Always use `gh` CLI for GitHub interactions.
+
 ## Development Rules
 
 ### Code style
