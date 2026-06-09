@@ -5,9 +5,9 @@
 .github/
 .gitignore
 .vscode/
-*.md
-install.sh
+README.md
 AGENTS.md
+install.sh
 
 {{ if and (eq .work true) (eq .codespaces false) }}
 .gitconfig
