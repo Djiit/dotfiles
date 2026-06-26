@@ -22,6 +22,9 @@ enable_notifications = true
 api_timeout = 720.0
 auto_compact_threshold = 200000
 enable_experimental_hooks = true
+applied_migrations = [
+    "bash_read_only_defaults_v1",
+]
 
 [[providers]]
 name = "mistral"
@@ -137,20 +140,9 @@ allowlist = [
 denylist = []
 sensitive_patterns = []
 
-[tools.search_replace]
-permission = "always"
-allowlist = []
-denylist = []
-sensitive_patterns = [
-    "**/.env",
-    "**/.env.*",
-]
-max_content_size = 100000
-create_backup = false
-fuzzy_threshold = 0.9
 
 [tools.bash]
-permission = "ask"
+permission = "always"
 allowlist = [
     "~/.vibe/plans/*",
     "~/Projects/*",
@@ -363,3 +355,32 @@ sensitive_patterns = [
 ]
 max_write_bytes = 64000
 create_parent_dirs = true
+
+[tools.read]
+permission = "always"
+allowlist = []
+denylist = []
+sensitive_patterns = [
+    "**/.env",
+    "**/.env.*",
+]
+max_read_bytes = 64000
+
+[tools.edit]
+permission = "always"
+allowlist = []
+denylist = []
+sensitive_patterns = [
+    "**/.env",
+    "**/.env.*",
+]
+fuzzy_threshold = 0.9
+
+[tools.search_replace]
+permission = "always"
+allowlist = []
+denylist = []
+sensitive_patterns = [
+    "**/.env",
+    "**/.env.*",
+]
