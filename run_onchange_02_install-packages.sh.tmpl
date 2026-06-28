@@ -10,6 +10,13 @@ fi
 {{ if eq .chezmoi.os "linux" -}}
 sudo mkdir -p -m 755 /etc/apt/keyrings
 
+{{ range .packages.linux.binaries -}}
+if ! command -v {{ .name }} &> /dev/null; then
+    echo "Installing: {{ .name }}"
+    {{ .command }}
+fi
+{{ end -}}
+
 {{ range .packages.linux.aptSources -}}
 {{ . }}
 {{ end -}}

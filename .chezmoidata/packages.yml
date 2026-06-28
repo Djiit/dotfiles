@@ -21,6 +21,8 @@ packages:
         command: "curl -fsSL https://gh.io/copilot-install | bash"
       - name: "gcx"
         command: "curl -fsSL https://raw.githubusercontent.com/grafana/gcx/main/scripts/install.sh | sh"
+      - name: "vibe"
+        command: "curl -LsSf https://mistral.ai/vibe/install.sh | bash"
     taps:
       - "anchore/grype"
       - "derailed/k9s"
@@ -51,6 +53,11 @@ packages:
       - "charmbracelet/tap/crush"
       - "topgrade"
   linux:
+    binaries:
+      - name: "keybase"
+        command: "curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb && sudo apt install -y ./keybase_amd64.deb && run_keybase"
+      - name: "appimagelauncher"
+        command: "curl -L https://github.com/TheAssassin/AppImageLauncher/releases/download/v3.0.0-beta-3/appimagelauncher_3.0.0-beta-2-gha287.96cb937_amd64.deb -o appimagelauncher.deb && sudo apt install -y ./appimagelauncher.deb"
     aptSources:
       - out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg && cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null && sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
       - echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
