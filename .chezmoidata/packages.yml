@@ -51,6 +51,7 @@ packages:
       - "googleworkspace-cli"
       - "yq"
       - "charmbracelet/tap/crush"
+      - "ripgrep"
       - "topgrade"
   linux:
     binaries:
