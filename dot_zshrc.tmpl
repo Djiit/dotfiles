@@ -1,0 +1,12 @@
+# Source files from .zshrc.d/
+for file in ~/.zshrc.d/*.sh; do
+  [ -f "$file" ] && . "$file"
+done
+unset file
+
+# Oh My Zsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME=""
+{{ $plugins :=  printf "plugins=(%s)" (.zsh.plugins | join " ") }}
+{{ $plugins }}
+source $ZSH/oh-my-zsh.sh
