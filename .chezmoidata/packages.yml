@@ -73,7 +73,6 @@ packages:
       - com.github.mtkennerly.ludusavi
       - com.google.Chrome
       - com.obsproject.Studio
-      - com.visualstudio.code
       - io.github.philipk.boilr
       - io.github.streetpea.Chiaki4deck
       - net.davidotek.pupgui2
