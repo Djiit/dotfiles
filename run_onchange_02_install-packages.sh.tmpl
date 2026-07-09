@@ -7,7 +7,7 @@ if ! command -v {{ .name }} &> /dev/null; then
 fi
 {{ end -}}
 
-{{ if eq .chezmoi.os "linux" -}}
+{{ if and (eq .chezmoi.os "linux") (ne .chezmoi.osRelease.id "steamos") -}}
 sudo mkdir -p -m 755 /etc/apt/keyrings
 
 {{ range .packages.linux.binaries -}}
@@ -33,6 +33,11 @@ sudo apt install -y {{ .packages.linux.apt | join " " }}
  {{ end -}}
 {{ end -}}
 
+# Install flatpaks on SteamDeck
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "steamos") }}
+flatpak install --system {{ .packages.linux.flatpaks | join " " }}
+{{ end -}}
+
 # Homebrew
 
 export HOMEBREW_NO_ENV_HINTS=1
@@ -45,6 +50,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
     eval "$(/opt/homebrew/bin/brew shellenv)"
 {{ end -}}
 
+{{ if or (eq .chezmoi.os "linux") (eq .chezmoi.os "darwin") -}}
 brew bundle \
     --no-upgrade \
     --quiet \
@@ -56,6 +62,7 @@ tap {{ . | quote }}
 brew {{ . | quote }}
 {{ end -}}
 EOF
+{{ end -}}
 
 {{ if eq .chezmoi.os "darwin" -}}
 brew bundle \

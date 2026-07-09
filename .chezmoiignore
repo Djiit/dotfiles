@@ -14,10 +14,3 @@ install.sh
 {{ else }}
 .gitconfig-djiit
 {{ end }}
-
-# SteamDeck
-*steamdeck*
-{{ if and (.chezmoi.osRelease) (eq .chezmoi.osRelease.id "steam") }}
-*
-!*steamdeck*
-{{ end }}
