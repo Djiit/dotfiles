@@ -142,10 +142,8 @@ sensitive_patterns = []
 
 
 [tools.bash]
-permission = "always"
+permission = "ask"
 allowlist = [
-    "~/.vibe/plans/*",
-    "~/Projects/*",
     "agent-browser",
     "basename",
     "cat",
