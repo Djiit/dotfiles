@@ -1,0 +1,46 @@
+# Local bin
+export PATH="$PATH:$HOME/.local/bin"
+
+# Homebrew (macOS and Linux)
+if [[ -x "/opt/homebrew/bin/brew" ]]; then
+  eval "$('/opt/homebrew/bin/brew' shellenv)"
+fi
+if [[ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]]; then
+  eval "$('/home/linuxbrew/.linuxbrew/bin/brew' shellenv)"
+fi
+
+# Google Cloud SDK
+export PATH=/opt/homebrew/share/google-cloud-sdk/bin:"$PATH"
+
+# opencode
+export PATH=/home/deck/.opencode/bin:$PATH
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# GPG
+export GPG_TTY=$(tty)
+
+# K9S config dir
+export K9S_CONFIG_DIR="$HOME/.config/k9s"
+
+# mise
+export MISE_EXPERIMENTAL=1
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
+
+# Ollama
+export OLLAMA_ORIGINS="moz-extension://*,chrome-extension://*,safari-web-extension://*"
+
+# vllm-metal
+export PATH="$HOME/.venv-vllm-metal/bin:$PATH"

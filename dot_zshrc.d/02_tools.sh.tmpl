@@ -1,0 +1,29 @@
+# starship prompt
+eval "$(starship init zsh)"
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# fzf
+if command -v fzf >/dev/null 2>&1; then
+  source <(fzf --zsh)
+fi
+
+# fubectl
+[ -f $HOME/fubectl.source ] && source $HOME/fubectl.source
+
+# Atuin
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh --disable-up-arrow)"
+
+# Go
+export GOPATH=$HOME/golang
+export GOROOT=/opt/homebrew/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
+# Tilt
+alias tilt=/opt/homebrew/bin/tilt
