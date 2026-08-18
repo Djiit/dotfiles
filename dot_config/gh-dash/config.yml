@@ -1,27 +1,27 @@
 prSections:
   - title: My open PRs (ready)
-    filters: is:open draft:false author:@me archived:false org:doctolib sort:updated-desc
+    filters: is:open draft:false author:@me archived:false org:mistralai sort:updated-desc
     layout:
       author:
         hidden: true
   - title: My open PRs (drafts)
-    filters: is:open draft:true author:@me archived:false org:doctolib sort:updated-desc
+    filters: is:open draft:true author:@me archived:false org:mistralai sort:updated-desc
     layout:
       author:
         hidden: true
   - title: Awaiting my review
-    filters: is:open review-requested:@me archived:false org:doctolib sort:created-asc
+    filters: is:open review-requested:@me archived:false org:mistralai sort:created-asc
   - title: Involved (reviewer or assignee)
-    filters: is:open user-review-requested:@me archived:false org:doctolib sort:updated-desc
+    filters: is:open user-review-requested:@me archived:false org:mistralai sort:updated-desc
   - title: Recently merged (mine)
-    filters: is:merged author:@me archived:false org:doctolib sort:updated-desc
+    filters: is:merged author:@me archived:false org:mistralai sort:updated-desc
     limit: 20
 
 issuesSections:
   - title: My open issues
-    filters: is:open author:@me archived:false org:doctolib sort:updated-desc
+    filters: is:open author:@me archived:false org:mistralai sort:updated-desc
   - title: Assigned to me
-    filters: is:open assignee:@me archived:false org:doctolib sort:updated-desc
+    filters: is:open assignee:@me archived:false org:mistralai sort:updated-desc
 
 defaults:
   preview:
@@ -62,7 +62,7 @@ defaults:
         hidden: true
 
 repoPaths:
-  doctolib/*: ~/workbench/*
+  mistralai/*: ~/workbench/*
 
 keybindings:
   prs:
