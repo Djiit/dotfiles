@@ -28,6 +28,11 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 - Always run linters, tests and build scripts to validate your work.
 - Never push to main directly. Always open a PR. Default to opening Draft PRs.
 
+### Pull Requests
+
+- Always include a TL;DR as the first section of the PR description.
+- When addressing PR comments, add an emoji to comments and inline comments to ack (thumbs up/down). Answer inline comments when necessary.
+
 ## Communication Style
 
 **Be concise and direct.** Inspired by caveman-lite mode:
