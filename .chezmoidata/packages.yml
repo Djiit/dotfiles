@@ -23,6 +23,8 @@ packages:
         command: "curl -fsSL https://raw.githubusercontent.com/grafana/gcx/main/scripts/install.sh | sh"
       - name: "vibe"
         command: "curl -LsSf https://mistral.ai/vibe/install.sh | bash"
+      - name: "plannotator"
+        command: "curl -fsSL https://plannotator.ai/install.sh | bash"
     taps:
       - "anchore/grype"
       - "derailed/k9s"
