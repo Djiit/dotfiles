@@ -30,6 +30,7 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 
 ### Pull Requests
 
+- Always check for CONTRIBUTING guidelines before opening a PR.
 - Always include a TL;DR as the first section of the PR description.
 - When addressing PR comments, add an emoji to comments and inline comments to ack (thumbs up/down). Answer inline comments when necessary.
 
@@ -43,6 +44,10 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 - Technical terms remain exact
 - Code blocks unchanged
 - Prioritize actionable information
+
+### External communication
+
+Before any external communication (including GitHub Issues, PR descriptions, and Notion page edits), run `/humanizer` to de-AI the text.
 
 ## Project-specific rules
 
