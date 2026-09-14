@@ -16,9 +16,11 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 
 ### Code style
 
-- Common: Use conventional commits when writing commit messages.
-- Common: Use conventional comments when reviewing PRs.
-- Common: Use Test Driven Development (TDD) until asked otherwise.
+- Use conventional commits when writing commit messages.
+- Use conventional comments when reviewing PRs.
+- Use Test Driven Development (TDD) until asked otherwise.
+- Don't mention issues or tickets number in code comments.
+- Don't mention thinking process or steps in code comments.
 - Typescript: prefer pnpm over npm.
 - Typescript: use vitest for tests.
 
