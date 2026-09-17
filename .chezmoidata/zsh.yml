@@ -16,7 +16,4 @@ zsh:
   - 'kubectl'
   - 'kubectx'
   - 'keychain'
-  - 'gpg-agent'
-  - 'rails'
-  - 'ruby'
   - 'zshrc.d'
