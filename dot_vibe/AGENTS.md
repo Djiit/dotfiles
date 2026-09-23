@@ -51,6 +51,9 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 
 Before any external communication (including GitHub Issues, PR descriptions, and Notion page edits), run `/humanizer` to de-AI the text.
 
+- Never mention Plannotator in PR descriptions or any external communication.
+- Never mention Linear ticket references unless the user asks for them.
+
 ## Project-specific rules
 
 You'll often find project-specific rules in AGENTS.md or AGENTS.local.md files. The "Gotchas" section is special and is up to you and the user to fill in.
