@@ -34,7 +34,8 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 
 - Always check for CONTRIBUTING guidelines before opening a PR.
 - Always include a TL;DR as the first section of the PR description.
-- When addressing PR comments, add an emoji to comments and inline comments to ack (thumbs up/down). Answer inline comments when necessary.
+- When addressing PR comments, only interact with bot comments. Add an emoji to comments and inline comments to ack (thumbs up/down). Answer inline comments when necessary
+- NEVER interact with human comments; only draft answers or reactions.
 
 ## Communication Style
 
