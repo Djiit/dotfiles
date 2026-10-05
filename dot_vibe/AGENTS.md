@@ -19,6 +19,7 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 - Use conventional commits when writing commit messages.
 - Use conventional comments when reviewing PRs.
 - Use Test Driven Development (TDD) until asked otherwise.
+- Reserve code comments for critica information. Silence is golden.
 - Don't mention issues or tickets number in code comments.
 - Don't mention thinking process or steps in code comments.
 - Typescript: prefer pnpm over npm.
@@ -29,6 +30,7 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 - Always ship tests with your code.
 - Always run linters, tests and build scripts to validate your work.
 - Never push to main directly. Always open a PR. Default to opening Draft PRs.
+- When working on frontend work, include screenshot to your work presentation.
 
 ### Pull Requests
 
@@ -36,6 +38,7 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 - Always include a TL;DR as the first section of the PR description.
 - When addressing PR comments, only interact with bot comments. Add an emoji to comments and inline comments to ack (thumbs up/down). Answer inline comments when necessary
 - NEVER interact with human comments; only draft answers or reactions.
+- When working on frontend, attach screenshots with `gh issue comment ISSUE-NUMBER --attach PATH/TO/IMAGE`
 
 ## Communication Style
 
