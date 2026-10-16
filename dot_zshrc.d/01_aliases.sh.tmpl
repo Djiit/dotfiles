@@ -33,6 +33,17 @@ jct() {
   rm "$temp_file"
 }
 
+# Bitwarden: unlock and persist the session for new terminals
+bwu() {
+  local session
+  session="$(bw unlock --raw)" || return 1
+  export BW_SESSION="$session"
+  umask 177
+  print -r -- "export BW_SESSION=${(q)session}" >! "$HOME/.zshrc.d/bw.sh"
+  chmod 600 "$HOME/.zshrc.d/bw.sh"
+  echo "Session saved to ~/.zshrc.d/bw.sh"
+}
+
 # Others
 {{ range .aliases -}}
   alias {{ .name | quote }}={{ .command | quote }}
