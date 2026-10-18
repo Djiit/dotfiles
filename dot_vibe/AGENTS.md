@@ -35,6 +35,7 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 ### Pull Requests
 
 - Always check for CONTRIBUTING guidelines before opening a PR.
+- Just before opening a PR, assess the review surface using CODEOWNERS: if more than 3 codeowners are impacted, inform the user and suggest splitting the PR — per owner (good) or per project/area (best, when possible, e.g. in a monorepo).
 - Always include a TL;DR as the first section of the PR description.
 - When addressing PR comments, only interact with bot comments. Add an emoji to comments and inline comments to ack (thumbs up/down). Answer inline comments when necessary
 - NEVER interact with human comments; only draft answers or reactions.
@@ -71,3 +72,7 @@ Example:
 
 - Always use const, not let
 ```
+
+## Machine-specific rules
+
+Read ~/.vibe/AGENTS.local.md for machine-specific notes.
