@@ -13,8 +13,6 @@ packages:
         command: "curl -LsSf https://astral.sh/uv/install.sh | sh"
       - name: "opencode"
         command: "curl -fsSL https://opencode.ai/install | bash"
-      - name: "ollama"
-        command: "curl -fsSL https://ollama.com/install.sh | sh"
       - name: "bun"
         command: "curl -fsSL https://bun.sh/install | bash"
       - name: "copilot"
