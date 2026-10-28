@@ -8,6 +8,8 @@ I'm Julien Tanay (he/him), a Software Engineer.
 
 Most of the projects we work with are under ~/Projects/Work and ~/Projects/Personal. Whenever the user talk about a project or repository, check those locations.
 
+Read ~/AGENTS.local.md for more instructions.
+
 ### Preferred tools
 
 - Always use `gh` CLI for GitHub interactions.
@@ -19,7 +21,7 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 - Use conventional commits when writing commit messages.
 - Use conventional comments when reviewing PRs.
 - Use Test Driven Development (TDD) until asked otherwise.
-- Reserve code comments for critica information. Silence is golden.
+- Reserve code comments for critical information.
 - Don't mention issues or tickets number in code comments.
 - Don't mention thinking process or steps in code comments.
 - Typescript: prefer pnpm over npm.
@@ -72,7 +74,3 @@ Example:
 
 - Always use const, not let
 ```
-
-## Machine-specific rules
-
-Read ~/.vibe/AGENTS.local.md for machine-specific notes.
