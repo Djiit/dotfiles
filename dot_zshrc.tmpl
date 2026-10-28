@@ -4,3 +4,6 @@ ZSH_THEME=""
 {{ $plugins :=  printf "plugins=(%s)" (.zsh.plugins | join " ") }}
 {{ $plugins }}
 source $ZSH/oh-my-zsh.sh
+
+# uv
+. "$HOME/.local/bin/env"
