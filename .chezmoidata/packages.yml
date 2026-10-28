@@ -100,6 +100,7 @@ packages:
       - "robusta-dev/krr"
       - "streetpea/streetpea"
       - "tilt-dev/tap"
+      - "terraform-linters/homebrew-tap"
     brews:
       - "act"
       - "pycparser"
@@ -175,7 +176,6 @@ packages:
       - "terraform-docs"
       - "terrascan"
       - "tfenv"
-      - "tflint"
       - "tfsec"
       - "tfupdate"
       - "the_silver_searcher"
@@ -207,6 +207,7 @@ packages:
       - "tilt-dev/tap/ctlptl"
     casks:
       - "aws-vpn-client"
+      - "terraform-linters/homebrew-tap/tflint"
       - "bitwarden"
       - "streetpea/streetpea/chiaki-ng"
       - "discord"
