@@ -1,5 +1,7 @@
 # Agent Instructions
 
+MANDATORY: `~/AGENTS.local.md` contains session-critical instructions. Read it at the start of every session, before any other work, and treat it as active instructions alongside this file.
+
 ## About the user
 
 I'm Julien Tanay (he/him), a Software Engineer.
@@ -7,8 +9,6 @@ I'm Julien Tanay (he/him), a Software Engineer.
 ## Development Environment
 
 Most of the projects we work with are under ~/Projects/Work and ~/Projects/Personal. Whenever the user talk about a project or repository, check those locations.
-
-Read ~/AGENTS.local.md for more instructions.
 
 ### Preferred tools
 
