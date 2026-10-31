@@ -16,6 +16,11 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 
 ## Development Rules
 
+- Read the minimal local context required for the task.
+- Keep changes scoped and avoid unrelated refactors.
+- When writing comments or documentation, strictly follow the Google Developer Documentation Style Guide (https://developers.google.com/style), and strongly prefer Simplified Technical English (ASD-STE100) over any existing language register.
+- Keep comments extremely brief. Explain WHY, never WHAT. If it just restates the code or narrates history, it's not needed.
+
 ### Code style
 
 - Use conventional commits when writing commit messages.
@@ -60,7 +65,6 @@ Before any external communication (including GitHub Issues, PR descriptions, and
 
 - Never mention Open Code Review (OCR) in PR descriptions or any external communication.
 - Never mention Plannotator in PR descriptions or any external communication.
-- Never mention Linear ticket references unless the user asks for them.
 
 ## Project-specific rules
 
