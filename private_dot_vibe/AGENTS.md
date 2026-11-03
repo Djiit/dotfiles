@@ -38,6 +38,7 @@ Most of the projects we work with are under ~/Projects/Work and ~/Projects/Perso
 - Always run linters, tests and build scripts to validate your work.
 - Never push to main directly. Always open a PR. Default to opening Draft PRs.
 - When working on frontend work, include screenshot to your work presentation. Attach screenshots to a PR with `gh issue comment ISSUE-NUMBER --attach PATH/TO/IMAGE`.
+- When your work is linked to a single Linear ticket, mention the ticket id in the PR title.
 
 ### Pull Requests
 
